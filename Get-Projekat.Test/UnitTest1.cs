@@ -19,7 +19,7 @@ namespace Get_Projekat.Test
         {
            // var students = _studentController.GetAllStudents();
             //Console.WriteLine(students.Value);
-            Assert.Equal(true,false);
+            Assert.Equal("str","strr");
         }
     }
 }
