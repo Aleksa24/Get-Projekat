@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Get-Projekat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\aleks\\visual-studio-projects\\Get-Projekat-Solution\\Get-Projekat", "Get-Projekat.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Get-Projekat.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
