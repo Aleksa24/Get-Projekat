@@ -32,7 +32,7 @@ namespace Get_Projekat.Controllers
         }
         
         [HttpGet("{brojIndeksa}",Name = "GetStudentByBrojIndeksa")]
-        public ActionResult<IEnumerable<Student>> GetStudentByBrojIndeksa(string brojIndeksa)
+        public ActionResult<Student> GetStudentByBrojIndeksa(string brojIndeksa)
         {
             return Ok(_studentService.GetByBrojIndeksa(brojIndeksa));
         }
@@ -41,8 +41,6 @@ namespace Get_Projekat.Controllers
         [EnableCors("policy")]
         public ActionResult <Student> CreateStudent(Student studentToBeCreated)
         {
-            Console.WriteLine(studentToBeCreated.ToString());
-
             var savedStudent = _studentService.New(studentToBeCreated);
 
             return CreatedAtRoute(nameof(GetStudentByBrojIndeksa), new { brojIndeksa = savedStudent.BrojIndeksa},savedStudent);
@@ -55,7 +53,7 @@ namespace Get_Projekat.Controllers
         }
         
         [HttpDelete("{brojIndeksa}")]
-        public ActionResult DeleteById(string brojIndeksa)
+        public ActionResult DeleteByBrojIndeksa(string brojIndeksa)
         {
             _studentService.DeleteByBrojIndeksa(brojIndeksa);
             return NoContent();
